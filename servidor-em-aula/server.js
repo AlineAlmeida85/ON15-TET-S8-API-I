@@ -1,8 +1,7 @@
-const filmesJson = require("./data/filmes.json")
-  
+const filmesJson = require("./data/ghibli.json")
+
 const express = require("express")
 const cors = require("cors")
-const { request } = require("express")
 
 const app = express()
 
@@ -12,7 +11,7 @@ app.use(express.json())
 app.get("/", (request, response) => {
     response.status(200).json([
         {
-            "Mensagem": "API de filmes"
+        " Mensagem": "API de filmes Ghibli On15"
         }
     ])
 })
@@ -47,23 +46,7 @@ app.post("/filmes/cadastrar", (request, response) => {
     
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(5055, () => {
-    console.log("Olá mundooo, criei meu servidor e tô na porta 5055");
+app.listen(5050, () => {
+    console.log("Olá mundooo, criei meu servidor e tô na porta 5050");
 });
+
